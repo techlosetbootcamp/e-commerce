@@ -16,10 +16,9 @@ const brands=[
 ]
 const Sponsors = () => {
   return (
-    // <div className='flex justify-center items-center ' >
     <div className='grid grid-cols-1  w-full overflow-hidden place-items-center gap-4 mt-44 ' >
 
-    <div className='flex flex-col  md:flex-row   h-full justify-center py-4 items-center gap-12 bg-[#E2F4FF]  w-full md:w-fit md:h-32'>
+    <div className='flex flex-col  md:flex-row   h-full justify-center py-4 items-center gap-12 bg-[#E2F4FF]  w-full  md:h-32'>
 
 
 {brands.map((brand)=>(

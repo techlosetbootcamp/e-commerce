@@ -3,10 +3,10 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart } from '../redux/Slice/carSlice';
-import { Product, fetchProducts } from '../redux/Slice/productSlice';
+import { addToCart } from '../redux/Slice/cartSlice';
 import { useAppDispatch } from '../redux/Hooks';
 import { RootState } from '../redux/store';
+
 
 const ProductDetail = () => {
   const { productId } = useParams();

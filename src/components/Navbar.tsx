@@ -8,10 +8,8 @@ import { Link }  from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 
-type NavbarProps = {
-  setShowCart: React.Dispatch<React.SetStateAction<boolean>>;
-};
-const Navbar = ({setShowCart}:NavbarProps) => {
+
+const Navbar = ({setShowCart}:ShowCartProps) => {
     const cartCount=useSelector((state: { cart: string  })=>state.cart.length)
   return (
 

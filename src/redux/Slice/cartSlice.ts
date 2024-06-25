@@ -1,16 +1,7 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { ReactNode } from 'react';
 
 
-export interface Product {
-    id: number;
-    title: string;
-    image: string;
-    price: number;
-    quantity: number;
-    category: string;
-    
-}
+
 const initialState: Array<Product> = [];
 const cartSlice = createSlice({
     name: 'cart',
@@ -42,13 +33,13 @@ const cartSlice = createSlice({
           incrementQuantity: (state, action) => {
             const itemIndex = state.findIndex((item) => item.id === action.payload.id);
             if (itemIndex !== -1) {
-              state[itemIndex].quantity++; // Directly update quantity
+              state[itemIndex].quantity++; 
             }
           },
           decrementQuantity: (state, action) => {
             const itemIndex = state.findIndex((item) => item.id === action.payload.id);
             if (itemIndex !== -1) {
-              state[itemIndex].quantity--; // Directly update quantity
+              state[itemIndex].quantity--; 
             }
           },
     },

@@ -6,7 +6,7 @@ const Team = () => {
   return (
     
     <section >
-    <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+    <div className="mx-auto  px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
   
 
       <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -66,7 +66,7 @@ const Team = () => {
   
           <h2 className="mt-4 text-xl font-bold ml-3">Savannah Nguyen</h2>
             </div>
-            <div className='bg-[#E2F4FF] rounded-lg mx-auto p-3 mb-2  lg:w-[335px] '>
+            <div className='bg-[#E2F4FF] rounded-lg mx-auto p-3 mb-2  w-fit '>
 
           <p className="mt-1 text-sm text-[#003F62] ">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo possimus adipisci

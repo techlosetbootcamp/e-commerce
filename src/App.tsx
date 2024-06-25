@@ -1,29 +1,30 @@
-import React, { Dispatch, SetStateAction, useState } from 'react';
+import  {  useState } from 'react';
 import './App.css';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
 import Navbar from './components/Navbar';
-import Home from './components/Home';
-import Cart from './components/Cart';
+import Home from './pages/Home';
+import Cart from './pages/Cart';
 import { BrowserRouter as Router, Route,  Routes } from 'react-router-dom';
-import CategoryPage from './components/CategoryPage';
-import ProductDetail from './components/ProductDetail';
+import CategoryPage from './pages/CategoryPage';
+import ProductDetail from './pages/ProductDetail';
 import Footer from './components/Footer';
-import ProductPage from './components/ProductPage';
+import ProductPage from './pages/ProductPage';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
-// give type to below use state
-interface ShowCartState {
-  showCart: boolean;
-  setShowCart: React.Dispatch<React.SetStateAction<boolean>>;
-}
-type NavbarProps = ShowCartState;
-// const [showCart, setShowCart]: [boolean, Dispatch<SetStateAction<boolean>>] = useState<boolean>(false);
+
 const [showCart, setShowCart]= useState<boolean>(false);
 
   return (
     <div >
     <Provider store={store}>
+    <Toaster toastOptions={{
+      style: {
+        backgroundColor: '#EDA415',
+        color: 'white',
+      },
+    }} />
       <Router>
         <Navbar setShowCart={setShowCart} />
         <Routes>
@@ -47,5 +48,4 @@ const [showCart, setShowCart]= useState<boolean>(false);
 }
 
 export default App;
-    // "test": "react-scripts test",
 

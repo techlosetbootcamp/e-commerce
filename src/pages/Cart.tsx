@@ -2,8 +2,9 @@ import React from 'react'
 import { useSelector } from 'react-redux';
 import { RootState } from '../redux/store';
 import { RxCross1 } from "react-icons/rx";
-import CartProduct from './CartProduct';
-const Cart = ({setShowCart}:any) => {
+import CartProduct from '../components/CartProduct';
+import { Link } from 'react-router-dom';
+const Cart = ({setShowCart}:ShowCartProps) => {
     const products=useSelector((state: RootState) => state.cart);
     const gettotal=() => {
       let total=0
@@ -17,10 +18,13 @@ const Cart = ({setShowCart}:any) => {
   return (
     <div className='bg-black min-h-screen w-full fixed left-0 top-0 z-20 overflow-y-scroll'>
         <div className='max-w-md w-full min-h-full absolute top-0 left-0 p-6 bg-white'>
+            <Link to="/">
             <RxCross1
             className='absolute m-6 top-0 left-0 text-[24px] cursor-pointer'
             onClick={() => setShowCart(false)}
             />
+            </Link>
+            
             <h3 className='pt-6 text-lg font-medium uppercase text-gray-500'>
                 Your Cart
             </h3>

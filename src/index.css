@@ -7,9 +7,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 
 .banner{
     background-image: url('./assets/images/banner.png');
+    width: 100vw;
+    background-size: cover;
 }

@@ -17,8 +17,7 @@ const Hero = () => {
 
       <div className="text-center lg:py-24 overflow-y-hidden">
         <h2 className="text-3xl font-bold sm:text-4xl">Cnanon Camera</h2>
-
-        
+       
 
         <a
           href="#"

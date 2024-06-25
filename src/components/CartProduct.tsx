@@ -1,19 +1,12 @@
 import React from 'react'
 import { useAppDispatch } from '../redux/Hooks';
 import { RxCross1 } from 'react-icons/rx';
-import { decrementQuantity, incrementQuantity, removeFromCart } from '../redux/Slice/carSlice';
+import { decrementQuantity, incrementQuantity, removeFromCart } from '../redux/Slice/cartSlice';
 
 
 
 
-export interface CartProductProps {
-    id: number;
-    img: string;
-    title: string;
-    
-    price: number;
-    quantity: any;
-  }
+
   
 const CartProduct: React.FC<CartProductProps> = (
   { id, img, title, price, quantity }
@@ -26,7 +19,7 @@ const CartProduct: React.FC<CartProductProps> = (
         <div className='space-y-2'>
             <h3 className='font-medium'>{title}</h3>
             <div className='flex justify-between items-center'>
-      {/* ... other elements */}
+      
       <button className='...' onClick={() => dispatch(incrementQuantity({ id }))}>
         +
       </button>

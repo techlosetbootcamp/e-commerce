@@ -24,7 +24,6 @@ describe('Navbar Component', () => {
             element={
               <Navbar setShowCart={() => {}} />
             }
-            // <Navbar setShowCart={() => {}} />
               />
              
             </Routes>
