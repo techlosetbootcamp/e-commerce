@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import   { fetchProductsByCategory }  from '../redux/Slice/fetchprodslice'; 
-import ProductCard from '../components/Product/ProductCard';
-import { RootState } from '../redux/store';
-import { useAppDispatch } from '../redux/Hooks';
+import   { fetchProductsByCategory }  from '../../redux/Slice/fetchprodslice'; 
+import ProductCard from '../../components/productcard/ProductCard';
+import { RootState } from '../../redux/store/store';
+import { useAppDispatch } from '../../redux/hooks/Hooks';
 
 const CategoryPage: React.FC = () => {
-  const { category}  = useParams<{ category: string }>(); // 
+  const { category}  = useParams<{ category: string }>(); 
     const dispatch = useAppDispatch();
     const products = useSelector((state: RootState) => state.products.items.filter((product: { category: string | undefined; }) => product.category === category));
   const status = useSelector((state: RootState) => state.products.status);

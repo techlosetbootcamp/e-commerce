@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import ProductCard from '../components/Product/ProductCard'
+import ProductCard from '../../components/productcard/ProductCard'
 import { useSelector } from 'react-redux';
-import { useAppDispatch } from '../redux/Hooks';
-import { RootState } from '../redux/store';
-import { fetchProducts } from '../redux/Slice/productSlice';
-import CategoryList from '../components/Category/CategoryList';
+import { useAppDispatch } from '../../redux/hooks/Hooks';
+import { RootState } from '../../redux/store/store';
+import { fetchProducts } from '../../redux/Slice/productSlice';
+import CategoryList from '../../components/categoryList/CategoryList';
 
 
 

@@ -1,8 +1,8 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
-import { RootState } from '../redux/store';
+import { RootState } from '../../redux/store/store';
 import { RxCross1 } from "react-icons/rx";
-import CartProduct from '../components/CartProduct';
+import CartProduct from '../../components/cartProduct/CartProduct';
 import { Link } from 'react-router-dom';
 const Cart = ({setShowCart}:ShowCartProps) => {
     const products=useSelector((state: RootState) => state.cart);

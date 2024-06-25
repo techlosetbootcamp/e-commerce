@@ -1,15 +1,15 @@
 import  {  useState } from 'react';
 import './App.css';
 import { Provider } from 'react-redux';
-import { store } from './redux/store';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import Cart from './pages/Cart';
+import { store } from './redux/store/store';
+import Navbar from './components/navbar/Navbar';
+import Home from './pages/home/Home';
+import Cart from './pages/cart/Cart';
 import { BrowserRouter as Router, Route,  Routes } from 'react-router-dom';
-import CategoryPage from './pages/CategoryPage';
-import ProductDetail from './pages/ProductDetail';
-import Footer from './components/Footer';
-import ProductPage from './pages/ProductPage';
+import CategoryPage from './pages/categoryPage/CategoryPage';
+import ProductDetail from './pages/productDetail/ProductDetail';
+import Footer from './components/footer/Footer';
+import ProductPage from './pages/productPage/ProductPage';
 import { Toaster } from 'react-hot-toast';
 
 function App() {

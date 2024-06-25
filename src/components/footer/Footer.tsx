@@ -1,7 +1,7 @@
 import React from 'react'
-import send from "../assets/images/send-2.png"
-import headphones from "../assets/images/headphone.png"
-import logo from "../assets/images/logo-1 1.png"
+import send from "../../assets/images/send-2.png"
+import headphones from "../../assets/images/headphone.png"
+import logo from "../../assets/images/logo-1 1.png"
 const Footer = () => {
   return (
     <footer className='bg-[#E2F4FF] flex flex-col overflow-x-hidden  mt-10 items-center   h-full'>

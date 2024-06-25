@@ -1,9 +1,9 @@
 import React from 'react'
 import { IoSearch } from "react-icons/io5";
 import { AiOutlineUser,AiOutlineShoppingCart } from "react-icons/ai";
-import arrow from "../assets/images/arrow-down.png"
+import arrow from "../../assets/images/arrow-down.png"
 
-import logo2 from "../assets/images/logo2.png"
+import logo2 from "../../assets/images/logo2.png"
 import { Link }  from 'react-router-dom';
 import { useSelector } from 'react-redux';
 

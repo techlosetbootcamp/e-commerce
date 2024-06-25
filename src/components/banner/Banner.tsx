@@ -1,6 +1,6 @@
 
 
-import Button from './Button'
+import Button from '../button/Button'
 
 const Banner = () => {
   return (

@@ -1,4 +1,4 @@
-import camera from "../assets/images/camera.png"
+import camera from "../../assets/images/camera.png"
 const Hero = () => {
   return (
 

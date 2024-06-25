@@ -1,7 +1,7 @@
 import React from 'react'
-import { useAppDispatch } from '../redux/Hooks';
+import { useAppDispatch } from '../../redux/hooks/Hooks';
 import { RxCross1 } from 'react-icons/rx';
-import { decrementQuantity, incrementQuantity, removeFromCart } from '../redux/Slice/cartSlice';
+import { decrementQuantity, incrementQuantity, removeFromCart } from '../../redux/Slice/cartSlice';
 
 
 
