@@ -13,6 +13,4 @@
 
 .banner{
     background-image: url('./assets/images/banner.png');
-    width: 100vw;
-    background-size: cover;
 }

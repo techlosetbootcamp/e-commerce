@@ -33,3 +33,15 @@ interface ProductsState {
   price: number;
   quantity: any;
 }
+
+interface CategoryListProps {
+  categories: { name: string; count: number }[]
+  onCategoryChange: (category: string) => void;
+  selectedCategory: string;
+}
+interface Category {
+  name: string;
+  count: number;
+}
+
+

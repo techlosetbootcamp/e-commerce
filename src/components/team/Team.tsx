@@ -29,7 +29,6 @@ const Team = () => {
             distinctio alias voluptatum blanditiis laudantium.
           </p>
             </div>
-        {/* </a> */}
           </div>
   
           <div className=' h-fit rounded-2xl flex flex-col p-2 space-y-6 border w-full
