@@ -22,11 +22,17 @@ const CategoryPage: React.FC = () => {
      
 
     return (
-        <div className="grid grid-cols-1  w-full sm:w-[1300px] gap-4 mt-44 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-auto">
+      <>
+    
+
+      
+      <div className="grid grid-cols-1  w-full sm:w-[1328px] gap-4 mt-44 justify-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-auto">
             {products.map((product) => (
-                <ProductCard key={product.id} product={product} />
+              <ProductCard key={product.id} product={product} />
             ))}
-        </div>
+            </div>
+            
+            </>
     );
 };
 

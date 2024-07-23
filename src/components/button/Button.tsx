@@ -5,7 +5,7 @@ const Button = ({text}:{text:string}) => {
   return (
     
 
-    <button className='bg-[#EDA415] rounded-3xl h-14 lg:h-16 w-36 lg:w-40'>{text}</button>
+    <button className='bg-[#EDA415] rounded-3xl h-10 lg:h-12 w-32 lg:w-36'>{text}</button>
   )
 }
 

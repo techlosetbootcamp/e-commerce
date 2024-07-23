@@ -4,7 +4,8 @@ import { useSelector } from 'react-redux';
 import { useAppDispatch } from '../../redux/hooks/Hooks';
 import { RootState } from '../../redux/store/store';
 import { fetchProducts } from '../../redux/Slice/productSlice';
-import CategoryList from '../../components/categoryList/CategoryList';
+
+import Category from '../../components/Category/Category';
 
 
 
@@ -17,10 +18,12 @@ const ProductPage = () => {
     const dispatch = useAppDispatch();
     const products = useSelector((state: RootState) => state.products.items);
     const status = useSelector((state: RootState) => state.products.status);
-    
+    const [selectedCategory, setSelectedCategory] = useState('all')
     useEffect(() => {
         if (status === 'IDLE') {
             dispatch(fetchProducts());
+            
+            
         }
     }, [status, dispatch]);
 
@@ -29,20 +32,39 @@ const ProductPage = () => {
     
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+
+    const filteredProducts = selectedCategory === 'all' ? products : products.filter((product) => product.category === selectedCategory);
+
+  const currentProducts = filteredProducts.slice(indexOfFirstItem, indexOfLastItem);
+  const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
+
+  const handlePageChange = (pageNumber: number) => {
+    setCurrentPage(pageNumber);
+  };
+
+ 
     
-    const currentProducts = products.slice(indexOfFirstItem, indexOfLastItem);
-    const totalPages = Math.ceil(products.length / itemsPerPage);
     
-    const handlePageChange = (pageNumber: number) => {
-      setCurrentPage(pageNumber);
-    };
+    
+    
   return (
    <>
+<div className="">
 
-<div className=" text-[#1B5A7D] font-semibold flex flex-col items-center lg:flex-row lg:justify-between  w-full  mx-auto px-4">
+
+        
+      
+  <div className=" text-[#1B5A7D] font-semibold flex flex-col items-center lg:flex-row lg:justify-between  w-full  mx-auto px-4">
   <h2 className="text-2xl lg:text-3xl pl-2">Popular Products</h2>
-  <CategoryList categories={categories} /> 
-</div>
+<div className='flex  flex-wrap mt-4  gap-2'>
+     {categories.map((category) => (
+       <Category key={category} category={category} />
+      ))}
+   </div>
+      </div>
+
+<div>
+
 
 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-12 w-full  mx-auto px-4">
   {currentProducts.map((product) => (
@@ -76,7 +98,9 @@ const ProductPage = () => {
   </button>
 </div>
 
+</div>
 
+      </div>
 
         </>
               )}
